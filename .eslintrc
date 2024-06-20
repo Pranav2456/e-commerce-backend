@@ -1,0 +1,112 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "ignorePatterns": [
+        "build",
+        "node_modules"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "off",
+            {
+                "singleQuote": true
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "camelcase": "off",
+        "@typescript-eslint/no-unsafe-assignment": 0,
+        "@typescript-eslint/no-unsafe-member-access": 0,
+        "@typescript-eslint/no-misused-promises": 0,
+        "@typescript-eslint/no-unsafe-call": 0,
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": 1,
+        "@typescript-eslint/no-inferrable-types": [
+            "warn",
+            {
+                "ignoreParameters": true
+            }
+        ],
+        "no-extra-semi": 0,
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "info",
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "no-unexpected-multiline": "error",
+        "no-underscore-dangle": "off",
+        "no-shadow": "off",
+        "no-new": 0,
+        "eol-last": "error",
+        "@typescript-eslint/no-shadow": [
+            "error"
+        ],
+        "@typescript-eslint/no-unused-vars": "warn",
+        "quotes": [
+            2,
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "class-methods-use-this": "off",
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ]
+    }
+}
